@@ -4,4 +4,4 @@ layout: default
 # Menu
 - Research
 - CV
-- Courses
+- [Courses](./courses.html)
