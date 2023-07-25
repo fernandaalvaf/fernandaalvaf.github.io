@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# Menu
+## Menu
 - Research
 - CV
 - [Courses](./courses.html)
