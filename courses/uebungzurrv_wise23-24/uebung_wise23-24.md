@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Courses
-description: This is a list of offered courses and material
+title: Übung zur Ringvorlesung "Digital Humanities im Fokus"
+description: WS 2023/24
 ---
 # Übung zur Ringvorlesung "Digital Humanities im Fokus"
-<p style="text-align: center;">WS 2023/24</p>
+
 Die Übung begleitet die interdisziplinäre Ringvorlesung "Digital Humanities im Fokus: Methoden, Anwendungen und Perspektiven". In der Übung werden die behandelten Themen der Ringvorlesung vertieft. Die Teilnehmerinnen und Teilnehmer werden sich mit aktuellen Forschungsthemen aus der Ringvorlesung auseinandersetzen und zu einem der Themen einen Blogpost verfassen. Darüber hinaus können die Teilnehmer:innen eigene Projekte entwickeln und dabei die praktische Anwendung von digitalen Methoden erproben. Sie entwickelt so ihre Fähigkeit weiter, sich in neue theoretische und praktische Zusammenhänge einzuarbeiten, diese im Kontext ihrer eigenen Disziplin zu reflektieren und sie auf ausgewählte, selbst entworfene wissenschaftliche Fragestellungen anzuwenden.
 
 ## Ziele
