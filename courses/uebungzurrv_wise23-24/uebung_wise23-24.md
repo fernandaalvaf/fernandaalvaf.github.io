@@ -21,7 +21,9 @@ Die Übung begleitet die interdisziplinäre Ringvorlesung "Digital Humanities im
 
 **24.10.2023**: [Kulturgutdigitalisierung](https://docs.google.com/presentation/d/1lDdp6O5sWloEzLaA1EAY6_cXccduGf5s9UtuvTYRLTk)
 
-**07.11.2023**: Data Literacy
+**07.11.2023**: [automatische Erkennung](https://docs.google.com/presentation/d/1NOzTKY6mr7A-mXeFCSjWzBe_GxxOGEKp_Y2jo8lNKIw/edit?usp=sharing)
+
+Data literacy (30.10.23): der Vortrag wurde aus Krankheitsgründen abgesagt
 
 **14.11.2023**: Netzwerkanalyse
 
@@ -53,6 +55,8 @@ Die Blogposts sollten Folgendes beinhalten:
 - die wichtigsten Argumente/Features/Tools, die vorgestellt wurden
 - den Beitrag der vorgestellten Forschung zum Fachbereich
 - die Diskussionen in der Q&A-Session
+
+Mehr Infos: [Call for Blog Reviews by Students](Folien.pdf)
 
 [Digital Humanities im Fokus](https://dhimfokus.hypotheses.org/)
 
@@ -94,3 +98,8 @@ Stäcker, T. (2018). Das VD17 at your fingertips: Der Masterplan. Nachgedanken z
 Digitalisierung (2017). In F. Jannidis, H. Kohle, & M. Rehbein (eds.), Digital Humanities: Eine Einführung (1st ed., pp. 179–198). J.B. Metzler Verlag.
 
 
+### Automatisierte Erkennung
+
+Chollet, F. (2021). Deep Learning with Python. Manning.
+
+Schumacher, M. K. (2023). Orte und Räume im Roman: Ein Beitrag zur digitalen Literaturwissenschaft. Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-662-66035-5
