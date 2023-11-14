@@ -25,7 +25,7 @@ Die Übung begleitet die interdisziplinäre Ringvorlesung "Digital Humanities im
 
 Data literacy (30.10.23): der Vortrag wurde aus Krankheitsgründen abgesagt
 
-**14.11.2023**: Netzwerkanalyse
+**14.11.2023**: [Netzwerkanalyse](https://docs.google.com/presentation/d/1-3VzGpW0Wy0rrTKT7SYM11UjOyVBPnPr0Nz0H2GGw3o/edit?usp=sharing)
 
 **21.11.2023**: Spatial Reality in der Lehre
 
@@ -103,3 +103,22 @@ Digitalisierung (2017). In F. Jannidis, H. Kohle, & M. Rehbein (eds.), Digital H
 Chollet, F. (2021). Deep Learning with Python. Manning.
 
 Schumacher, M. K. (2023). Orte und Räume im Roman: Ein Beitrag zur digitalen Literaturwissenschaft. Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-662-66035-5
+
+### Netzwerkanalyse
+
+Ahnert, R., & Ahnert, S. E. (2023). Tudor networks of power. Oxford University Press.
+
+Alvares Freire, F. (2023, May 23). Exploring Ancient History through Social Network Analysis of the Zenon Archive. Zenodo. https://doi.org/10.5281/zenodo.7961419
+
+Grandjean, M. (2016). A social network analysis of Twitter: Mapping the digital humanities community. Cogent Arts & Humanities, 3(1), 1171458. https://doi.org/10.1080/23311983.2016.1171458
+
+Newman, M. E. J. (2010). Networks. An introduction. Oxford University Press.
+
+Milani, E., Weitkamp, E., & Webb, P. (2020). The Visual Vaccine Debate on Twitter: A Social Network Analysis. Media and Communication, 8(2), 364–375. https://doi.org/10.17645/mac.v8i2.2847
+
+Milgram, S. (1967). The Small World Problem. Psychology Today. Ziff-Davis Publishing Company.
+
+Recuero, R., Soares, F. B., & Gruzd, A. (2020). Hyperpartisanship, Disinformation and Political Conversations on Twitter: The Brazilian Presidential Election of 2018. Proceedings of the International AAAI Conference on Web and Social Media, 14, 569–578. https://doi.org/10.1609/icwsm.v14i1.7324
+
+Zachary, W. W. (1977). An Information Flow Model for Conflict and Fission in Small Groups. Journal of Anthropological Research, 33(4), 452–473.
+
