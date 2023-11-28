@@ -27,9 +27,9 @@ Data literacy (30.10.23): der Vortrag wurde aus Krankheitsgründen abgesagt
 
 **14.11.2023**: [Netzwerkanalyse](https://docs.google.com/presentation/d/1-3VzGpW0Wy0rrTKT7SYM11UjOyVBPnPr0Nz0H2GGw3o/edit?usp=sharing)
 
-**21.11.2023**: Spatial Reality in der Lehre
+**21.11.2023**: [Spatial Reality in der Lehre](https://docs.google.com/presentation/d/1JMrMbuIbmRYwjDjuq3VbVVdHfkTJ4bb9mx26yEW-VpQ/edit?usp=sharing)
 
-**28.11.2023**: Genderprofilen
+**28.11.2023**: [Genderprofilen](https://docs.google.com/presentation/d/1kpQAJNVzJmtjVFd-9-tLCIKzbReyrrCKtoHDh3nvI4o/edit?usp=sharing)
 
 **05.12.2023**: Digitale Editionen
 
