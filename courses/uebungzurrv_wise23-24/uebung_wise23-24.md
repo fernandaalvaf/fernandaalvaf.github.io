@@ -31,7 +31,7 @@ Data literacy (30.10.23): der Vortrag wurde aus Krankheitsgründen abgesagt
 
 **28.11.2023**: [Genderprofilen](https://docs.google.com/presentation/d/1kpQAJNVzJmtjVFd-9-tLCIKzbReyrrCKtoHDh3nvI4o/edit?usp=sharing)
 
-~~**05.12.2023**: Digitale Editionen~~ FÄLLT AUS
+**05.12.2023**: [NER](https://docs.google.com/presentation/d/1sdiBfbv6Fs7UqrozX8vQMPKLx1KFYiMOc0QUbJeVD0I/edit?usp=sharing)
 
 **12.12.2023**: Digitale Editionen
 
