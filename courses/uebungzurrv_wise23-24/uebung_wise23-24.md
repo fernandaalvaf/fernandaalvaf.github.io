@@ -57,7 +57,7 @@ Die Blogposts sollten Folgendes beinhalten:
 - den Beitrag der vorgestellten Forschung zum Fachbereich
 - die Diskussionen in der Q&A-Session
 
-Mehr Infos: [Call for Blog Reviews by Students](Folien.pdf) -- verfasst von Erik Renz
+Mehr Infos: [Call for Blog Reviews by Students](Call_for_Blog_Reviews_by_Students.pdf) -- verfasst von Erik Renz
 
 [Digital Humanities im Fokus](https://dhimfokus.hypotheses.org/)
 
