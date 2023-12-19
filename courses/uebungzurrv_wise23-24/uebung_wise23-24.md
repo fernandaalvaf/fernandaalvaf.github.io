@@ -36,7 +36,7 @@ ediarum.MEDIAEVUM (04.12.23): der Vortrag wurde aus Krankheitsgründen abgesagt
 
 **12.12.2023**: [Digitale Editionen](https://docs.google.com/presentation/d/1puW_8zorj2tJQzlOG1TDU1nMZq9rm81bexORBjVGZNk/edit?usp=sharing)
 
-**19.12.2023**: Digital Humanities Curriculum
+**19.12.2023**: [Digital Humanities Curriculum](https://docs.google.com/presentation/d/1OG5tdsrhgy0fOHi7MAX1p6Kp0mmL5NHHAsEyFwfYj5E/edit?usp=sharing)
 
 **02.01.2024**: Asynchron
 
