@@ -40,7 +40,7 @@ ediarum.MEDIAEVUM (04.12.23): der Vortrag wurde aus Krankheitsgründen abgesagt
 
 **02.01.2024**: Asynchron
 
-**09.01.2024**: automatische Texterkennung
+**09.01.2024**: [automatische Texterkennung: DEMel](https://docs.google.com/presentation/d/1Tp4C3UD1ju-DvPXaAXI7vgTQjadTpmFTqpXqAEvMAiE/edit?usp=sharing)
 
 **16.01.2024**: Ancient Historians in a Digital Environment
 
