@@ -32,6 +32,7 @@ Data literacy (30.10.23): der Vortrag wurde aus Krankheitsgründen abgesagt
 **28.11.2023**: [Genderprofilen](https://docs.google.com/presentation/d/1kpQAJNVzJmtjVFd-9-tLCIKzbReyrrCKtoHDh3nvI4o/edit?usp=sharing)
 
 **05.12.2023**: [NER](https://docs.google.com/presentation/d/1sdiBfbv6Fs7UqrozX8vQMPKLx1KFYiMOc0QUbJeVD0I/edit?usp=sharing)
+
 ediarum.MEDIAEVUM (04.12.23): der Vortrag wurde aus Krankheitsgründen abgesagt
 
 **12.12.2023**: [Digitale Editionen](https://docs.google.com/presentation/d/1puW_8zorj2tJQzlOG1TDU1nMZq9rm81bexORBjVGZNk/edit?usp=sharing)
@@ -42,7 +43,7 @@ ediarum.MEDIAEVUM (04.12.23): der Vortrag wurde aus Krankheitsgründen abgesagt
 
 **09.01.2024**: [automatische Texterkennung: DEMel](https://docs.google.com/presentation/d/1Tp4C3UD1ju-DvPXaAXI7vgTQjadTpmFTqpXqAEvMAiE/edit?usp=sharing)
 
-**16.01.2024**: Ancient Historians in a Digital Environment
+**16.01.2024**: [Ancient Historians in a Digital Environment](https://docs.google.com/presentation/d/1VrYfRoUjLgs3AA9J2noynPJCPoAmxgGvvLkHtwtbB5c/edit?usp=sharing)
 
 **23.01.2024**: Abschlusssitzung
 
