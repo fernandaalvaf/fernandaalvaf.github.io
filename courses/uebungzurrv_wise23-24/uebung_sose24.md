@@ -15,7 +15,7 @@ Die Übung begleitet die interdisziplinäre Ringvorlesung "Digital Humanities im
 
 ![Plakat von der Ringvorlesung](Plakat_SoSe_24.png)
 
-## Ablaufplan
+## Ablaufplan der Übung
 
 **11.04.2024**: Einführung
 
@@ -27,9 +27,9 @@ Die Übung begleitet die interdisziplinäre Ringvorlesung "Digital Humanities im
 
 **16.05.2024**: "GenderVarianten: Revisionen von Genderkonstruktionen in Textüberlieferungen"
 
-**30.05.2024**: Digitale Editionen
+**30.05.2024**: Digitale Editionen 1
 
-**06.06.2024**: Digitale Editionen 2
+**06.06.2024**: Digitale Editionen 2: XML
 
 **13.06.2024**: Digitale Editionen 3
 
