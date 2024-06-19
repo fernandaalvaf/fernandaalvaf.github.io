@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add click event listener to each day
         day.addEventListener('click', (event) => {
             event.stopPropagation();
-            if (currentMonth === 11 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
+            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
                 overlayTitle.textContent = shortTitle;
                 overlayText.innerHTML = content.innerHTML;
                 overlay.style.display = 'flex';
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     openAllDoorsButton.addEventListener('click', () => {
         days.forEach(day => {
             const dayNumber = parseInt(day.getAttribute('data-day'), 10);
-            if (currentMonth === 11 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
+            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
                 const content = day.querySelector('p');
                 const shortTitleElement = day.querySelector('.short-title');
                 shortTitleElement.style.display = 'block';
