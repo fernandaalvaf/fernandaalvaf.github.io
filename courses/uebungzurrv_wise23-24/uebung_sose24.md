@@ -17,7 +17,7 @@ Die Übung begleitet die interdisziplinäre Ringvorlesung "Digital Humanities im
 
 ## Ablaufplan der Übung
 
-**11.04.2024**: Einführung
+**11.04.2024**: [Einführung](https://docs.google.com/presentation/d/1Tt6FrDX7GJgqilX0_2gfvsec_mtijtiBl1vbouaSuC4/edit?usp=sharing)
 
 **18.04.2024**: Algorithmenkritik
 
