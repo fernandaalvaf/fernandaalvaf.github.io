@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         day.appendChild(shortTitleElement);
 
         // Add initial classes based on whether the door can be opened
-        if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 5 represents Mai
+        if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 5 represents December
             day.classList.add('hidden');
         } else {
             day.classList.add('hidden');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add click event listener to each day
         day.addEventListener('click', (event) => {
             event.stopPropagation();
-            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 5 represents Mai
+            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 5 represents December
                 overlayTitle.textContent = shortTitle;
                 overlayText.innerHTML = content.innerHTML;
                 overlay.style.display = 'flex';
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     openAllDoorsButton.addEventListener('click', () => {
         days.forEach(day => {
             const dayNumber = parseInt(day.getAttribute('data-day'), 10);
-            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 5 represents Mai
+            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 5 represents December
                 const content = day.querySelector('p');
                 const shortTitleElement = day.querySelector('.short-title');
                 shortTitleElement.style.display = 'block';
