@@ -1,6 +1,8 @@
 # Welcome to My GitHub Pages
 
 Here is some introductory content for my GitHub Pages site.
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 
 <!-- Advent Calendar HTML Start -->
 <div id="advent-calendar-container">
@@ -149,4 +151,4 @@ Here is some introductory content for my GitHub Pages site.
 
 This is some additional content on my GitHub Pages site.
 
-<script src="script.js"></script>
+
