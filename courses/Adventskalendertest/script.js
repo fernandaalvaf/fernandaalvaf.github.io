@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         day.appendChild(shortTitleElement);
 
         // Add initial classes based on whether the door can be opened
-        if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
+        if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 5 represents Mai
             day.classList.add('hidden');
         } else {
             day.classList.add('hidden');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add click event listener to each day
         day.addEventListener('click', (event) => {
             event.stopPropagation();
-            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
+            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 5 represents Mai
                 overlayTitle.textContent = shortTitle;
                 overlayText.innerHTML = content.innerHTML;
                 overlay.style.display = 'flex';
@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     overlayImage.style.display = 'none';
                 }
                 day.classList.add('opened');
+                shortTitleElement.style.display = 'block';
             } else {
                 // Flash effect for doors that cannot be opened
                 day.classList.add('flash');
@@ -82,13 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
     openAllDoorsButton.addEventListener('click', () => {
         days.forEach(day => {
             const dayNumber = parseInt(day.getAttribute('data-day'), 10);
-            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
+            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 5 represents Mai
                 const content = day.querySelector('p');
                 const shortTitleElement = day.querySelector('.short-title');
                 shortTitleElement.style.display = 'block';
                 day.classList.add('opened');
                 day.classList.remove('hidden');
-                content.style.display = 'block';
+                content.style.display = 'none'; // Hide the content
             }
         });
     });
