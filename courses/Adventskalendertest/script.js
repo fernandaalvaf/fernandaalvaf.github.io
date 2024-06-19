@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add event listener to open all openable doors
     openAllDoorsButton.addEventListener('click', () => {
         days.forEach(day => {
-            const dayNumber = day.getAttribute('data-day');
+            const dayNumber = parseInt(day.getAttribute('data-day'), 10);
             if (currentMonth === 11 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
                 const content = day.querySelector('p');
                 const shortTitleElement = day.querySelector('.short-title');
