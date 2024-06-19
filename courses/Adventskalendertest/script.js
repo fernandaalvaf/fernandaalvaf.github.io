@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         days.forEach(day => {
             const dayNumber = parseInt(day.getAttribute('data-day'), 10);
             if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 5 represents Mai
-                const content = day.querySelector('p');
+                //const content = day.querySelector('p');
                 const shortTitleElement = day.querySelector('.short-title');
                 shortTitleElement.style.display = 'block';
                 day.classList.add('opened');
