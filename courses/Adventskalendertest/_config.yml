@@ -1,0 +1,4 @@
+# Other existing settings
+include:
+  - style.css
+  - script.js
