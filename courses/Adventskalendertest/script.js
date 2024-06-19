@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         day.appendChild(shortTitleElement);
 
         // Add initial classes based on whether the door can be opened
-        if (currentMonth === 11 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
+        if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
             day.classList.add('hidden');
         } else {
             day.classList.add('hidden');
