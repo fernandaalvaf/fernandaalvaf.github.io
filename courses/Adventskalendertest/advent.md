@@ -146,6 +146,7 @@ Here is some introductory content for my GitHub Pages site.
       <p id="overlay-text"></p>
     </div>
   </div>
+  <button id="open-all-doors">Open All Doors</button>
 </div>
 <!-- Advent Calendar HTML End -->
 

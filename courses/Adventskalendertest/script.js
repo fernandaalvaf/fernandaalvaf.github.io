@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlayImage = document.getElementById('overlay-image');
     const overlayText = document.getElementById('overlay-text');
     const closeButton = document.getElementById('close-button');
+    const openAllDoorsButton = document.getElementById('open-all-doors');
     const today = new Date();
     const currentDay = today.getDate();
     const currentMonth = today.getMonth();
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         day.appendChild(shortTitleElement);
 
         // Add initial classes based on whether the door can be opened
-        if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
+        if (currentMonth === 11 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
             day.classList.add('hidden');
         } else {
             day.classList.add('hidden');
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Add click event listener to each day
         day.addEventListener('click', (event) => {
             event.stopPropagation();
-            if (currentMonth === 5 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
+            if (currentMonth === 11 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
                 overlayTitle.textContent = shortTitle;
                 overlayText.innerHTML = content.innerHTML;
                 overlay.style.display = 'flex';
@@ -75,5 +76,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 day.querySelector('.short-title').style.display = 'block';
             });
         }
+    });
+
+    // Add event listener to open all openable doors
+    openAllDoorsButton.addEventListener('click', () => {
+        days.forEach(day => {
+            const dayNumber = day.getAttribute('data-day');
+            if (currentMonth === 11 && dayNumber <= currentDay) {  // Assuming currentMonth 11 represents December
+                const content = day.querySelector('p');
+                const shortTitleElement = day.querySelector('.short-title');
+                shortTitleElement.style.display = 'block';
+                day.classList.add('opened');
+                day.classList.remove('hidden');
+                content.style.display = 'block';
+            }
+        });
     });
 });
