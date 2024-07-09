@@ -1,0 +1,198 @@
+/* display grid with 4 columns with image in the background */
+#advent-calendar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background: url('tree.webp') no-repeat center center;
+    background-size: cover;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* set the characteristics of each door "list item" */
+#advent-calendar li {
+    position: relative;
+    padding: 10px;
+    background: rgb(117, 7, 7); /* background for closed doors */
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    transition: background 0.3s, transform 0.3s; /* transition for background change */
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    cursor: pointer; /* indicate that items are clickable */
+    overflow: hidden; /* ensure that content does not overflow */
+}
+
+/* set characteristics of opened doors  */
+#advent-calendar li.opened {
+    background: rgba(255, 255, 255, 0.0); /* transparent background for opened doors so we can see the image in the background*/
+}
+
+/* characteristics of the image - how to work with images of different sizes? */
+
+#advent-calendar li img {
+    display: none;
+    max-width: 40%; /* max size of the image */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* show little numbers on the doors - perhaps this is redundant */
+
+#advent-calendar li::before {
+    content: attr(data-day); /* use the data-day attribute */
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* show the date on the door (this is why the above might be redundant) */
+
+#advent-calendar li a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #fff; /* this value is overriden by my github pages config */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    margin-bottom: 2px; 
+}
+
+/* paragraph content - shown in the pop-up */
+
+#advent-calendar li p {
+    display: none; /* hidden by default */
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    margin: 0; 
+    padding: 0 5px;
+    text-align: center;
+    line-height: 1.2; 
+    overflow-wrap: break-word; /* ensure long words break properly */
+    word-wrap: break-word; /* ensure long words break properly */
+    white-space: normal; /* allow text to wrap normally */
+    max-height: 70px; 
+    overflow: hidden; /* hide overflow content */
+}
+
+/* hide p - should only be shown in pop up */
+
+#advent-calendar li.opened p {
+    display: none; /* hide original content */
+}
+
+/* opened doors should show the shor title after opened */
+
+#advent-calendar li.opened .short-title {
+    display: none; /* initially hide the short title */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* again, p should not be shown unless in the pop up - is this redundant? */
+
+.hidden p {
+    display: none;
+}
+
+/* flash effect */
+
+#advent-calendar .flash {
+    animation: flash 0.5s ease-in-out; 
+}
+
+@keyframes flash {
+    0%, 100% { background: rgb(117, 7, 7); } 
+    50% { background: rgb(255, 0, 0); } 
+}
+
+/* flash message */
+
+.flash p {
+    display: block; 
+}
+
+/* characteristics of the "pop-up" === overlay */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#overlay-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* max height and width of the total advent calendar size */
+
+#overlay-image {
+    max-width: 30%; 
+    max-height: 30%; 
+    margin-bottom: 10px;
+}
+
+#overlay-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #000;
+    line-height: 1.4;
+}
+
+#overlay-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+}
