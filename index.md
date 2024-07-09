@@ -4,4 +4,4 @@ layout: default
 
 - Research
 - CV
-- [Courses](./courses.html)
+- [Courses](.courses/courses)
