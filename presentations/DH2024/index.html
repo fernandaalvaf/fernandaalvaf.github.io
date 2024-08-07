@@ -1,0 +1,546 @@
+<html>
+    <head>
+        <title>Social Network Analysis as an exploratory tool for analyzing large corpora of papyri</title>
+        <meta name="author" content="Fernanda Alvares Freire" />
+        <meta name="description" content="Slides" />
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../reveal/css/reveal.css" />
+        <link rel="stylesheet" href="../reveal/css/theme/serif.css" />
+        <!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css"/>
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <style type="text/css">
+            .reveal .slides{
+                font-size: 24pt;
+            }
+            .reveal small {
+                vertical-align: middle;
+            }
+            .reveal ul.small,
+            .reveal table.small{
+                font-size: 0.5em;
+            }
+            .reveal ul.middle {
+				font-size: 0.8em;
+			}
+			.reveal ul.middle li {
+				margin-bottom: 0.7em;
+			}
+			.reveal table td {
+				vertical-align: top;
+			}
+            .reveal h1{
+                font-size: 1.6em;
+            }
+            .reveal h2 {
+				font-size: 1.3em;
+			}
+            .reveal h3, .reveal h4{
+                font-size: 1.2em;
+            } 
+            .reveal img.logo{
+                margin: 0 0.25em;
+                background:none; 
+                border:none; 
+                box-shadow:none;
+            }
+
+            .reveal section img.normal{
+                background:none; 
+                border:none; 
+                box-shadow:none;
+            }
+
+
+            .reveal section img{
+                border: none;
+                vertical-align: bottom;
+                margin: 0;
+            }
+            .reveal td.middle{
+                vertical-align: middle;
+            }
+            .reveal li{
+                margin: 0.2em 0;
+            }
+            .reveal li li{
+                font-size: smaller;
+            }
+            .reveal a {
+				color: purple;
+			}
+			.underline {
+				text-decoration: underline;
+			}
+
+            /* Container holding the images */
+            div.maps {
+                position: relative;
+            }
+
+            /* Style for the first image */
+            div.maps img.img1 {
+                position: relative;
+                z-index: 1;
+                top: 100;
+                left: -50;
+            }
+
+            /* Style for the second image */
+            div.maps img.img2 {
+                position: relative;
+                z-index: 2;
+                top: 0;
+                left: -750;
+            }
+
+            /* Circle */
+            div.maps .circle {
+                position: relative;
+                top: -120px;  
+                left: 320px;
+                width: 50px;
+                height: 50px;
+                background-color: transparent;
+                border: 3px solid #7851A9;
+                border-radius: 50%;
+                z-index: 3;
+            }
+
+            /* Line */
+            div.maps .line {
+                position: absolute;
+                top: 225px;  
+                left: 180px; 
+                width: 146px;
+                height: 3px;
+                background-color: #7851A9;
+                z-index: 4;
+                transform: rotate(15deg); 
+            }
+            .paragraph-right {
+                position:relative;
+                top: -300px;
+                left: 650px;
+            }   
+            div.closing .img {
+                position: relative;
+                z-index: 1;
+            }
+            div.closing p {
+                position: relative;
+                top:-400px;
+                font-size: 76;
+            }
+            </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                
+                <!-- ############### Title Slide ################### -->
+                <section>
+                    <section>
+                    <h1>Social Network Analysis as an exploratory tool for analyzing large corpora of papyri</h1>
+                    <br/>
+                    <small>Fernanda Alvares Freire </small>
+                    <br/>
+                    <p style="font-size: 14px;">University of Rostock, Technische Universität Darmstadt </p>
+                    <br/>
+                    <br/>
+                    <small>DH2024<br />August 06, 2024</small>
+                    <br/>
+                    <br/>
+                    <p>
+                        <a href="https://www.uni-rostock.de/"><img height="50" src="img/basics/logo-uni-rostock.png" class="logo" /></a>
+                        <img height="50" src="img/basics/tuD_logo.png" class="logo" />
+                        <img height="50" src="img/basics/capes.png" class="logo" />
+                        <!-- img height="50" src="img/basics/wwu.png" class="logo" / -->                        
+                    </p>
+                    <aside class="notes">
+                        <p></p>
+                    </aside>
+                    </section> 
+                <!-- ############### Overview ################### -->
+                
+                
+                <section>
+                    <p style="text-align: left;">Based on doctoral research (Universität Münster, Dec. 2023)</p>
+                    
+                    <p style="text-align: left;">Goals:</p>
+                    <ul>
+                        <li>Evaluate Social Network Analysis as a methodological approach to examine patterns of social interaction as represented in papyri</li>
+                        <li>Explore the potential applications of computational analysis to the digital papyri data that is already available</li>
+                    </ul>
+                </section> 
+                
+                <section data-background-iframe="https://papyri.info/ddbdp/p.cair.zen;1;59016" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(239, 238, 234, 0.9); color: #000000; padding: 20px; font-size: 20px; text-align: left;">
+                        <h2>for example...</h2>
+                        <p>papyri.info</p>
+                    </div>
+                </section>
+                <section data-background-iframe="https://www.trismegistos.org/text/677" data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(239, 238, 234, 0.9); color: #000000; padding: 20px; font-size: 20px; text-align: left;">
+                        <h2>and...</h2>
+                        <p>Trismegistos</p>
+                    </div>
+                </section> 
+                <section>
+                    <h2>Today's talk</h2>
+                    <p>Identifying key actors in a large corpus with the help of SNA.</p>
+                </section> 
+            </section>       
+                <!-- ############### Context ################### -->
+                <section>
+                    <section>
+                        <h1>1. Context</h1>
+                    </section>
+                    <section>
+                        <h2>The Zenon Archive</h2>
+                        <table>
+                            <td>
+                                <img class="normal" src="img/IMG-0032-01.PNG" width="1000"/>
+                                <p style="font-size: 10px;">Detail and emphasis on the Barrington Atlas, no. 1.</p>
+                            </td>
+                            <td>
+                                <p>Zenon's private and official businesses</p>
+                                <ul>
+                                    <small>
+                                        <li>Zenon emigrated from Caria to Egypt to work with the finance minister (Apollonios)</li>
+                                        <li>Follows the different phases of Zenon's career and his establishment in Egypt</li>
+                                        <li>Collection of documents pertaining the administration of a large estate in the Fayum</li>
+                                    </small>
+                                </ul>
+                            </td>
+                        
+                        
+                        </table>
+                    </section>
+                    <section>
+                        <h2>The Texts of the Zenon Archive</h2>
+                        <table>
+                            <td>
+                                <img class="normal" src="img/distributionoftexts.png" width="2000"/></td>
+                            <td>
+                                <p>The documents of the archive</p>
+                                <ul>
+                                    <small>
+                                        <li>Corpus with c. 1845 documents from the 3rd century BCE (subset: 886)</li>
+                                        <li>Letters, contracts, petitions, memoranda, etc.</li>
+                                        <li>Distributed in several collections in the world</li>
+                                        <li>The research focuses on the corpus of documents owned and published by the Cairo Museum (the P.Cair.Zen. volumes published by C.C. Edgar)</li>  
+                                    </small>
+                                </ul>
+                            </td>
+                        </table>
+                    </section>
+                   <!---
+                    <section>
+                        <h3>The Fayum</h3>
+                        <div class="maps">
+                            <img class="img1" src="img/Egypt_Google.png" width="600">
+                            <img class="img2" src="img/FayumTM.jpg" width="300">
+                            <div class="circle"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="paragraph-right" style="width:40%;font-size: smaller;"><ul>
+                            <li>Influx of migrants (particularly Greek migrants) and new settlements</li>
+                            <li>Concession of large plots of land by the crown to certain prominent individuals</li>
+                            <ul><li>Showcase the potentials of cultivation in the Fayum</li></ul>
+                            <li>Agricultural experiments and introduction of new crops (olives , cereals, vines, figs, walnut, peaches, and plums)</li>                           
+                        </ul></div>
+                    </section>
+                    -->
+                    <!---
+                    <section>
+                        <h2>A closer look into day-to-day Ptolemaic Fayum</h2>
+                        <ol>
+                            <ul>
+                                <li>The bureaucracy of the Ptolemaic administration required the production of paperwork, which, in turn, documented the inner workings of:</li>
+                                <ul>
+                                    <li>The taxation system</li>
+                                    <li>Agricultural production</li>
+                                    <li>Productive industries (i.e., textiles, oil, wine)</li>
+                                </ul>
+                                <li>The content of the papyri reveals the daily businesses of the local ruling elite, but also workers and farmers</li>
+                                <li>The interpersonal interactions reveal the individuals who were responsible for critical roles within the system</li>
+                            </ul>
+                        </ol>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                    -->                    
+                </section>
+            	<!-- ############### Framework ################### -->
+                <section>
+					<section>
+						<h1>2. Methodological Approach</h2>
+					</section>
+                    <section>
+                        <table>
+                            <td>
+                                <img class="normal" src="img/Exploring the Zenon Archive.jpg" width="2000"/></td>
+                            <td>
+                                <p>Building a local database</p>
+                                <ul>
+                                    <small>
+                                        <li>Data collected from papyri.info and Trismegistos (<a href="https://github.com/fernandaalvaf/PapyriToCSV">web scraping script</a>)</li>
+                                        <li>Collected data cleaned and stored on a local relational database managed with Microsoft Access</li>
+                                        <li>Data about the interpersonal interactions and relationships manually added through a GUI</li>
+                                        <li>Customized datasets could be exported to .csv for further processing with python and Gephi</li>
+                                    </small>
+                                </ul>
+                            </td>
+                        </table> 
+                    </section>
+                    <section>
+                        <h3>Relationships and Interactions</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Interaction</td>
+                                    <td>Relationship</td>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                    <td>
+                                        <ul>
+                                            <li>isolated instance of engagement in mutual meaningful behaviors patterned by social norms, values and roles.</li>
+                                            <li>a financial transaction, a conversation, an order, etc.</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>characterized by ongoing interaction</li>
+                                            <li>implies the presence of some degree of interdependence (e.g., power relationships), mutual influence (e.g., professional relationships), and/or shared identity (e.g., familial or kinship relationships) or purpose (e.g., work relationships).</li>
+                                            <li>kinship, work, etc.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Example</h2>
+                        <p>P. Cairo Zen. I 59016</p>
+                        <table class="small" style="width:100%;">
+                            <tr>
+                                <td style="width:3%">
+                                        <p>
+                                            r<br/>    
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            5<br/>
+                                            <br/>
+                                            <br/>
+                                            v<br/>
+                                            <br/>
+                                            10<br/>
+                                        </p>
+                                <td style="width:55%;">
+                                    <p>
+                                        <br/>    
+                                        <mark>Δημήτριος</mark> <mark>Ζήνωνι</mark> χαίρειν. ἐν τῆι Τύρωι ἀγοράσματά τινα<br/>
+                                        λαβὼν ἀνήλωκα τὸ ἐφόδιον. καλῶς ἂν οὖν ποιήσαις δοὺς <b><mark>Νικάδαι</mark><br/>
+                                        τῶι τὰ γράμματά σοι ἀποδεδωκότι</b> (δραχμὰς) ρν. ἔφθασεν δέ με<br/>
+                                        προαπελθὼν <mark>Χάρμος</mark>, ἐπεὶ μετʼ ἐκείνου ἂν αὐτὸν ἀπέστειλα. φρόντι-<br/>
+                                        σον δὲ ἵνα καὶ τὸν <mark>Νικάδαν</mark> ἀποστείλῃς εἰς Βηρυτὸν μετʼ ἀσφαλείας.<br/>
+                                        γράψον δέ μοι \καὶ/ ὅπου δεήσει τὸ κερμάτιον ἀποστεῖλαι.<br/>
+                                        ἔρρωσο. (ἔτους) κζ, Ἀπελλαίου ιγ.<br/>
+                                        <br/>
+                                        παρὰ <mark>Δημητρίου</mark> τοῦ<br/>
+                                        ἐν Κύπρωι γραμμα-<br/>
+                                        τέως ἀργυρίου (δραχμὰς) ρν.<br/>
+                                        <mark>Ζήνωνι</mark>.
+                                    </p>   
+                                </td>
+                                <td style="width:42%;">
+                                    <br/>
+                                    <br/>
+                                    <mark>Demetrios</mark> to <mark>Zenon</mark> greeting. I have spent my travel 
+                                    allowance because of some purchases in Tyre. 
+                                    Therefore, you would do well to give 150 drachmas
+                                    to <b><mark>Nikadas</mark> who has brought the letter to you</b>.
+                                    <mark>Charmos</mark> finished before me and went ahead, 
+                                    otherwise I would have sent him along (with
+                                    <mark>Nikadas</mark>). Make certain too that you send <mark>Nikadas</mark> to
+                                    Beirut safely. Also, write to me where the money 
+                                    must be sent.
+                                    Good-bye. (Year) 27, Apellaios 13.
+                                    <br/><br/>    
+                                    To <mark>Zenon</mark>.
+                                    From <mark>Demetrios</mark> the scribe in Cyprus, (regarding) 150 drachmas.
+                                    <br/><br/><small>White, Ancient Letters (1986), 5.</small>
+                                </td>
+                        </table>
+                        <img class="normal" src="img/relationshipzenonnikadas-01.png" width="60%"/>
+                    </section>
+                    <!-- <section>
+                        <h3>Relationships and Interactions</h3>
+                        <img class="normal" src="img/relationships_interactions.png"/>
+                    </section>
+                -->
+                     <section>
+                        <h3>Relationships</h3>
+                        <table>
+                            <td>
+                                <img class="normal" src="img/net_relationships.png" width="2000"/></td>
+                            <td>
+                                <p style="font-size: 24px;">The majority of the relationships registered are declared in the texts as markers of identity.</p>
+                            </td>
+                        </table>                
+                    </section>
+                    <section>
+                        <h3>Interactions</h3>
+                        <table>
+                            <td>
+                                <img class="normal" src="img/net_interactions.png" width="2000"/></td>
+                            <td>
+                                <p style="font-size: 24px;">Clearly more intricate than the network of relationships.</p>
+                                <br/>
+                                <p style="font-size: 24px;">Zenon <i>unsurprisingly</i> has a high impact in the network.</p>
+                            </td>
+                        </table> 
+                    </section>
+                </section>
+                <!-- ############### Analysis ################### -->
+                <section> 
+                    <section>
+                        <h1>3. Identifying Relevant Individuals</h1>
+                    </section>  
+                    <section>
+                        <h3>What can we tell from the network measures?</h3>
+                        <img class="normal" src="img/networkmeasures.png" width="700"/>
+                    </section>
+                    <section>
+                        <h2>List of potentially relevant social actors:</h2>
+                        <table style="font-size: smaller;">
+                            <td style="width: 15%;"></td>
+                            <td style="text-align: left;">
+                                <li>Amyntas</li>
+                                <li><span style="color: rgb(227, 119, 25);"><b>Toubias</b></span></li>
+                                <li>Damis</li>
+                                <li>Kriton</li>
+                                <li>Kleitarchos</li>
+                                <li>Iason</li>
+                                <li>Anosis</li>
+                                <li>Artemidoros</li>
+                            </td>
+                            <td style="width: 5%;"></td>
+                            <td style="text-align: left;">
+                                <li>Demeas</li>
+                                <li>Nikon</li>
+                                <li>Aristeus</li>
+                                <li>Apollophanes</li>
+                                <li>Neoptolemos</li>
+                                <li>Demetrios and Euempolos</li>
+                                <li>Aineas</li>
+                                <li><b><span style="color: rgb(227, 119, 25);"> Leptines, Nikandros and Myrikon</span></b></li>
+                            </td>
+                        </table> 
+                        <br /> 
+                        <ul style="font-size: medium;">
+                            <li>The values of the three measures have to be taken into consideration - and also how they are measured!</li>
+                            <li>It is essential to go back to the sources and contextualize the results</li>
+                            <li>Definition of the scope of the research: from 2267 individuals to a list of 19 potentially relevant individuals</li>
+                        <ul>
+                    </section>
+                    <!--
+                    <section>
+                        <h2>Toubias</h2>
+                        <ul style="font-size: smaller;">
+                            <li>Network measures:</li>
+                            <ul>
+                                <li>low in betweenness centrality</li>
+                                <li>relatively high in weighted degree</li>
+                                <li>ranking in the top 10 in eigenvector centrality</li>
+                            </ul>
+                            <li>Attested 18 times in 7 different texts:</li>
+                            <ul>
+                                <li>4 accounts</li>
+                                <li>2 letters: sends gifts to Apollonios and king Ptolemy</li>
+                                <li>1 deed of sale: identity marker, mentioned as employer of witnesses</li>
+                            </ul>     
+                            <li>head of the prestigious Toubiad family in Transjordan</li>
+                            <li>well-connected with prominent individuals in the network</li>
+                            <li>high weighted degree measure due to the identification of several relationships of employment</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Leptines, Nikandros and Myrikon</h2>
+                        <ul style="font-size: smaller;">
+                            <li>Network measures:</li>
+                            <ul>
+                                <li>rank high exclusively in weighted degree</li>
+                            </ul>
+                            <li>Attestations:</li>
+                            <ul>
+                                <li>1 text of the Zenon archive: a letter that mentions the relationships between the three individuals</li>
+   
+                            </ul>     
+                            <li>Leptines is the father of Nikandros and Myrikon</li>
+                            <li>Their high-weighted degree score is due to the weighted familiar connections</li>
+                        </ul>
+                    </section>
+                    -->
+                </section> 
+                <!-- ############### Conclusions ################### -->
+                <section>
+                    <section><h1>4. Concluding Remarks</h1></section>
+                    <section>
+                        <h2>Takeaways and Outlook</h2>
+                        <ul>
+                            <li>We were able to successfully identify key actors in the sources: valuable tool for exploring the corpus</li>
+                            <li>The model for the database of interactions/relationships can be adapted to different corpora/research questions</li>
+                            <li>Language technologies can improve the collection of data, which was done manually for the interactions</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div class="closing">
+                            <img class="normal" style="opacity: 15%;" src="img/interactions_20231220.png" width="700"/>
+                            <p>Thank you!</p>
+                            <p style="font-size: smaller;"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
+								>CC-BY 4.0</a></p>
+                        </div>
+                        
+                        
+                    </section>  
+                </section>
+
+                
+            </div>
+        </div>
+        <script src="../reveal/lib/js/head.min.js"></script>
+        <script src="../reveal/js/reveal.js"></script>
+        <script>
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    // Optional reveal.js plugins
+    dependencies: [
+        { src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '../reveal/plugin/zoom-js/zoom.js', async: true },
+        { src: '../reveal/plugin/notes/notes.js', async: true }
+        ]
+    });
+</script>
+    </body>
+</html>
