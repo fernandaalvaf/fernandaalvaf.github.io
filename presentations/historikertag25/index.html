@@ -153,7 +153,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                     <br />
                     <br />
                   <h3>suggested prompt</h3>
-                    <p>
+                    <small>
                       You are a historian specializing in {insert specialization} texts. I will provide you with the text of a historical document (e.g., a letter, decree, or report). Your task is to identify all interpersonal interactions present in the text and output them as a JSON array.
 Each object in the array should represent a single interaction between two individuals (named or referred to) and must include the following fields:
 letter_id: A short unique identifier for the document (I will provide it, or you may infer a label such as "{insert id pattern}" if not specified).
@@ -166,7 +166,7 @@ certainty: "explicit" if the interaction is directly stated; "implied" if inferr
 ⚠️ Only include interactions between humans (not deities, places, or objects).
 ⚠️ You may include interactions involving unnamed people (e.g., "Zenon's subordinates") if the relationship is clear.
 Format your output as a valid JSON array, with no extra commentary.
-                    </p>
+                    </small>
                     <aside class="notes">
                         <p></p>
                     </aside>
