@@ -1,1 +1,197 @@
+<html>
+    <head>
+        <title>Über Metadaten hinaus</title>
+        <meta name="author" content="Fernanda Alvares Freire" />
+        <meta name="description" content="Slides" />
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../reveal/css/reveal.css" />
+        <link rel="stylesheet" href="../reveal/css/theme/serif.css" />
+        <!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css"/>
+        <script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+        <style type="text/css">
+            .reveal .slides{
+                font-size: 24pt;
+            }
+            .reveal small {
+                vertical-align: middle;
+            }
+            .reveal ul.small,
+            .reveal table.small{
+                font-size: 0.5em;
+            }
+            .reveal ul.middle {
+				font-size: 0.8em;
+			}
+			.reveal ul.middle li {
+				margin-bottom: 0.7em;
+			}
+			.reveal table td {
+				vertical-align: top;
+			}
+            .reveal h1{
+                font-size: 1.6em;
+            }
+            .reveal h2 {
+				font-size: 1.3em;
+			}
+            .reveal h3, .reveal h4{
+                font-size: 1.2em;
+            } 
+            .reveal img.logo{
+                margin: 0 0.25em;
+                background:none; 
+                border:none; 
+                box-shadow:none;
+            }
 
+            .reveal section img.normal{
+                background:none; 
+                border:none; 
+                box-shadow:none;
+            }
+
+
+            .reveal section img{
+                border: none;
+                vertical-align: bottom;
+                margin: 0;
+            }
+            .reveal td.middle{
+                vertical-align: middle;
+            }
+            .reveal li{
+                margin: 0.2em 0;
+            }
+            .reveal li li{
+                font-size: smaller;
+            }
+            .reveal a {
+				color: purple;
+			}
+			.underline {
+				text-decoration: underline;
+			}
+
+            /* Container holding the images */
+            div.maps {
+                position: relative;
+            }
+
+            /* Style for the first image */
+            div.maps img.img1 {
+                position: relative;
+                z-index: 1;
+                top: 100;
+                left: -50;
+            }
+
+            /* Style for the second image */
+            div.maps img.img2 {
+                position: relative;
+                z-index: 2;
+                top: 0;
+                left: -750;
+            }
+
+            /* Circle */
+            div.maps .circle {
+                position: relative;
+                top: -120px;  
+                left: 320px;
+                width: 50px;
+                height: 50px;
+                background-color: transparent;
+                border: 3px solid #7851A9;
+                border-radius: 50%;
+                z-index: 3;
+            }
+
+            /* Line */
+            div.maps .line {
+                position: absolute;
+                top: 225px;  
+                left: 180px; 
+                width: 146px;
+                height: 3px;
+                background-color: #7851A9;
+                z-index: 4;
+                transform: rotate(15deg); 
+            }
+            .paragraph-right {
+                position:relative;
+                top: -300px;
+                left: 650px;
+            }   
+            div.closing .img {
+                position: relative;
+                z-index: 1;
+            }
+            div.closing p {
+                position: relative;
+                top:-400px;
+                font-size: 76;
+            }
+            </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                
+                <section>
+                    <h1>Über Metadaten hinaus</h1>
+                    <h2> kann KI weiterhelfen? </h2>  
+                    
+                    <br />
+            
+                    <br />
+                    <br />
+                  <h3>suggested prompt</h3>
+                    <p>
+                      You are a historian specializing in {insert specialization} texts. I will provide you with the text of a historical document (e.g., a letter, decree, or report). Your task is to identify all interpersonal interactions present in the text and output them as a JSON array.
+Each object in the array should represent a single interaction between two individuals (named or referred to) and must include the following fields:
+letter_id: A short unique identifier for the document (I will provide it, or you may infer a label such as "{insert id pattern}" if not specified).
+source: The person initiating the interaction (by name or placeholder like "Unnamed scribe").
+target: The person receiving or affected by the interaction.
+edge_types: An array of interaction types chosen from the following controlled vocabulary:
+"communicative", "administrative", "social", "ceremonial", "hierarchical", "bureaucratic", "economic", "legal", "military", "educational", "religious", "familial", "friendly", "hostile", "neutral".
+description: A short English summary (1–2 sentences) of the nature of the interaction, based on evidence in the text.
+certainty: "explicit" if the interaction is directly stated; "implied" if inferred from context.
+⚠️ Only include interactions between humans (not deities, places, or objects).
+⚠️ You may include interactions involving unnamed people (e.g., "Zenon's subordinates") if the relationship is clear.
+Format your output as a valid JSON array, with no extra commentary.
+                    </p>
+                    <aside class="notes">
+                        <p></p>
+                    </aside>
+                </section> 
+            </div>
+        </div>
+        <script src="../reveal/lib/js/head.min.js"></script>
+        <script src="../reveal/js/reveal.js"></script>
+        <script>
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
+    // Optional reveal.js plugins
+    dependencies: [
+        { src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '../reveal/plugin/zoom-js/zoom.js', async: true },
+        { src: '../reveal/plugin/notes/notes.js', async: true }
+        ]
+    });
+</script>
+    </body>
+</html>
